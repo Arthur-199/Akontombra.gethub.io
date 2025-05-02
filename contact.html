@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Akontombra Senior High School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s forwards;
+    }
+    .animate-slideInLeft {
+      animation: slideInLeft 0.8s forwards;
+    }
+    .animate-slideInRight {
+      animation: slideInRight 0.8s forwards;
+    }
+    .animate-pulse {
+      animation: pulse 2s infinite;
+    }
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+    nav ul li a {
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #facc15; /* Tailwind yellow-400 */
+      transform: scale(1.1);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .dropdown-content {
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-green-700 text-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="text-2xl font-bold">Akontombra Senior High School</a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-green-400 transition">About</a></li>
+          <li><a href="academics.html" class="hover:text-green-400 transition">Academics</a></li>
+          <li><a href="admissions.html" class="hover:text-green-400 transition">Admissions</a></li>
+          <li><a href="contact.html" class="hover:text-green-400 transition font-semibold underline">Contact</a></li>
+          <li><a href="location.html" class="hover:text-yellow-400 transition">Location</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto p-6 max-w-4xl">
+    <h1 class="text-3xl font-extrabold mb-6 animate-fadeIn">Contact Us</h1>
+    <p class="mb-6 animate-fadeIn delay-150 text-lg">We would love to hear from you! Please reach out to us with any questions or inquiries.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-3xl font-semibold mb-4 animate-slideInLeft">School Address</h2>
+        <p class="text-lg">Akontombra Senior High School<br />P.O. Box 123<br />Sefwi Akontonbra, Western North Region<br />Ghana</p>
+        <h2 class="text-3xl font-semibold mt-6 mb-4 animate-slideInLeft">Phone</h2>
+        <p class="text-lg">+233 123 456 789</p>
+        <h2 class="text-3xl font-semibold mt-6 mb-4 animate-slideInLeft">Email</h2>
+        <p class="text-lg">info@akontombrashs.edu.gh</p>
+
+        <h2 class="text-3xl font-semibold mt-10 mb-4 animate-slideInLeft">Staff Directory</h2>
+        <ul class="space-y-4 text-lg animate-fadeIn">
+          <li class="animate-slideInLeft">
+            <p class="font-semibold text-lg">Mr. Kwame Mensah</p>
+            <p>Principal</p>
+            <p>Email: <a href="mailto:kwame.mensah@akontombrashs.edu.gh" class="text-green-700 hover:underline">kwame.mensah@akontombrashs.edu.gh</a></p>
+          </li>
+          <li class="animate-slideInLeft">
+            <p class="font-semibold text-lg">Mrs. Akosua Boateng</p>
+            <p>Vice Principal</p>
+            <p>Email: <a href="mailto:akosua.boateng@akontombrashs.edu.gh" class="text-green-700 hover:underline">akosua.boateng@akontombrashs.edu.gh</a></p>
+          </li>
+          <li class="animate-slideInLeft">
+            <p class="font-semibold text-lg">Mr. Joseph Owusu</p>
+            <p>Head of Admissions</p>
+            <p>Email: <a href="mailto:joseph.owusu@akontombrashs.edu.gh" class="text-green-700 hover:underline">joseph.owusu@akontombrashs.edu.gh</a></p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 animate-slideInLeft">Send Us a Message</h2>
+        <form action="#" method="POST" class="space-y-4">
+          <div>
+            <label for="name" class="block mb-1 font-semibold">Name</label>
+            <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-900" />
+          </div>
+          <div>
+            <label for="email" class="block mb-1 font-semibold">Email</label>
+            <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-900" />
+          </div>
+          <div>
+            <label for="messageType" class="block mb-1 font-semibold">Message Type</label>
+            <select id="messageType" name="messageType" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-900">
+              <option value="" disabled selected>Select message type</option>
+              <option value="general">General Inquiry</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block mb-1 font-semibold">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-900"></textarea>
+          </div>
+          <button type="submit" class="bg-green-400 text-green-900 font-semibold px-6 py-3 rounded shadow hover:bg-green-500 transition">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-green-700 text-white py-6 mt-20">
+    <div class="container mx-auto text-center">
+      <p>© 2024 Akontombra Senior High School. All rights reserved.</p>
+      <div class="mt-4 space-x-4">
+        <a href="#" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

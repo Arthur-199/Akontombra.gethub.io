@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Akontombra Senior High School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-size: cover;
+      position: relative;
+      color: #1f2937; /* Tailwind gray-800 */
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: -1;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s forwards;
+    }
+    .animate-slideInLeft {
+      animation: slideInLeft 0.8s forwards;
+    }
+    .animate-slideInRight {
+      animation: slideInRight 0.8s forwards;
+    }
+    .animate-pulse {
+      animation: pulse 2s infinite;
+    }
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+    nav ul li a {
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #facc15; /* Tailwind yellow-400 */
+      transform: scale(1.1);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-green-700 text-white shadow animate-slideInLeft">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="text-2xl font-bold">Akontombra Senior High School</span>
+      </a></a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-green-400 transition font-semibold underline">About</a></li>
+          <li><a href="academics.html" class="hover:text-green-400 transition">Academics</a></li>
+          <li><a href="admissions.html" class="hover:text-green-400 transition">Admissions</a></li>
+          <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
+          <li><a href="location.html" class="hover:text-yellow-400 transition">Location</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto p-6 max-w-4xl animate-fadeIn">
+    <h1 class="text-4xl font-extrabold mb-6 animate-fadeIn">About Akontombra Senior High School</h1>
+
+    <div class="space-y-4">
+      <!-- Dropdown item: History -->
+      <h3 class="font-semibold mb-2 animate-slideInLeft text-3xl">History</h3>
+      <p class="text-gray-700 animate-slideInLeft text-lg">
+        BRIEF HISTORY OF THE SCHOOL: The school was established and absorbed by the Ghana Education Service in January, 1994 through the initiative of the chiefs and people of Akontombra in the then Sefwi Wiawso District who unanimously realized the dynamics of secondary school education on the socio-economic development of individuals and the society at large.
+        <br /><br />
+        The Akontombra Senior High School is basically a Day School. Yet it has hostel facilities that can accommodate about 150 students. There is a Six-unit classroom block with office and store. As at the time of this documentation, a
+        <br /><br />
+      </p>
+      <h3 class="font-semibold mb-2 animate-slideInLeft text-3xl">Achievements</h3>
+      <ul class="list-disc list-inside mt-2 text-lg">
+        <li>Mr. James Kwabena Nkuah was adjudged the best Teacher, Secondary Division, Western Region in 2007</li>
+        <li>The Girls’ Football team was the Champion for Sefwi Zone from 2008 to 2012</li>
+        <li>Mr. Opoku Samuel was awarded for being the best WASSCE Student in the Western Region in 2013</li>
+      </ul>
+
+      <h3 class="font-semibold mb-2 animate-slideInLeft text-3xl">Our Vision</h3>
+      <p class="text-gray-700 animate-slideInLeft text-lg">
+        Our Vision of the school: To identify academic potentials within the Akontombra community and elsewhere, and to encourage and help develop such talents under mutually cheap and affordable partnership terms.
+      </p>
+
+      <h3 class="font-semibold mb-2 animate-slideInLeft text-3xl">Our Mission</h3>
+      <p class="text-gray-700 animate-slideInLeft text-lg">
+        The mission of the school: To provide access for cheap and affordable secondary school education to a marginalized and deprived rural pupils who would have otherwise been deprived of secondary school education due to ignorance and high level of poverty.
+      </p>
+
+    </div>
+
+    <section class="mt-12 animate-fadeIn">
+      <h2 class="text-3xl font-extrabold mb-6">Core Values</h2>
+      <ul class="list-disc list-inside space-y-3 text-lg">
+        <li>Integrity: We uphold honesty and strong moral principles in all our endeavors.</li>
+        <li>Excellence: We strive for the highest standards in academics and personal development.</li>
+        <li>Community Engagement: We foster a supportive and inclusive environment that encourages collaboration and service.</li>
+        <li>Innovation: We embrace creativity and continuous improvement in teaching and learning.</li>
+      </ul>
+    </section>
+
+  <footer class="bg-green-700 text-white py-6 mt-20 animate-slideInRight">
+    <div class="container mx-auto text-center">
+      <p>© 2024 Akontombra Senior High School. All rights reserved.</p>
+      <div class="mt-4 space-x-4">
+        <a href="#" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <script>
+    document.querySelectorAll('.dropdown-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const dropdownContent = header.querySelector('.dropdown-content');
+        const icon = header.querySelector('i.fas.fa-chevron-down');
+        if (dropdownContent.classList.contains('open')) {
+          dropdownContent.classList.remove('open');
+          icon.classList.remove('rotate-90');
+          icon.classList.add('rotate-0');
+        } else {
+          dropdownContent.classList.add('open');
+          icon.classList.remove('rotate-0');
+          icon.classList.add('rotate-90');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
