@@ -10,19 +10,27 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-size: cover;
       position: relative;
       color: #1f2937; /* Tailwind gray-800 */
+      filter: saturate(1) contrast(1);
+      font-size: 16px;
+      line-height: 1.5;
     }
-    body::before {
+    body::after {
       content: "";
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.7);
-      z-index: -1;
+      background-image: url('https://ghanahighschools.com/wp-content/uploads/2022/06/0040604-crest-1024x952.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.3;
+      z-index: -2;
+      pointer-events: none;
     }
     @keyframes fadeIn {
       from {
@@ -101,7 +109,7 @@
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="text-gray-800">
   <header class="bg-green-700 text-white shadow animate-slideInLeft">
     <div class="container mx-auto flex justify-between items-center p-4">
       <a href="index.html" class="flex items-center space-x-2">
@@ -114,7 +122,7 @@
           <li><a href="academics.html" class="hover:text-green-400 transition">Academics</a></li>
           <li><a href="admissions.html" class="hover:text-green-400 transition">Admissions</a></li>
           <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
-          <li><a href="location.html" class="hover:text-yellow-400 transition">Location</a></li>
+          <li><a href="location.html" class="hover:text-green-400 transition font-semibold underline">Location</a></li>
         </ul>
       </nav>
     </div>
@@ -165,9 +173,9 @@
     <div class="container mx-auto text-center">
       <p>© 2024 Akontombra Senior High School. All rights reserved.</p>
       <div class="mt-4 space-x-4">
-        <a href="#" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://www.facebook.com/p/Akontombra-Senior-High-School-Old-Students-Association-100054255919977/" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://twitter.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="https://instagram.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
       </div>
     </div>
   </footer>
