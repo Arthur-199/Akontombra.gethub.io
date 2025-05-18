@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - Akontombra Senior High School</title>
+  <title>Academics - Akontombra Senior High School</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -24,7 +25,7 @@
       transform: translateX(-50%);
       width: 80%;
       height: 100%;
-      background-image: url('https://ghanahighschools.com/wp-content/uploads/2022/06/0040604-crest-1024x952.png');
+      /* background-image will be set dynamically by JS */
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -110,94 +111,121 @@
   </style>
 </head>
 <body class="text-gray-800">
-  <header class="bg-green-700 text-white shadow animate-slideInLeft">
+  <header class="bg-green-700 text-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="index.html" class="flex items-center space-x-2">
-        <span class="text-2xl font-bold">Akontombra Senior High School</span>
-      </a></a>
+      <a href="index.html" class="text-2xl font-bold">Akontombra Senior High School</a>
       <nav>
         <ul class="flex space-x-6">
           <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-green-400 transition font-semibold underline">About</a></li>
+          <li><a href="about.html" class="hover:text-green-400 transition">About</a></li>
           <li><a href="academics.html" class="hover:text-green-400 transition">Academics</a></li>
           <li><a href="admissions.html" class="hover:text-green-400 transition">Admissions</a></li>
           <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
-          <li><a href="location.html" class="hover:text-green-400 transition font-semibold underline">Location</a></li>
+          <li><a href="location.html" class="hover:text-green-400 transition">Location</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container mx-auto p-6 max-w-4xl animate-fadeIn">
-    <h1 class="text-4xl font-extrabold mb-6 animate-fadeIn">About Akontombra Senior High School</h1>
-
-    <div class="space-y-4">
-      <!-- Dropdown item: History -->
-      <h3 class="font-semibold mb-2 animate-slideInLeft text-3xl">History</h3>
-      <p class="text-gray-700 animate-slideInLeft text-lg">
-        BRIEF HISTORY OF THE SCHOOL: The school was established and absorbed by the Ghana Education Service in January, 1994 through the initiative of the chiefs and people of Akontombra in the then Sefwi Wiawso District who unanimously realized the dynamics of secondary school education on the socio-economic development of individuals and the society at large.
+    <main class="container mx-auto p-6 max-w-4xl bg-transparent">
+    <div class="space-y-6 bg-transparent">
+      <div class="history-header flex items-center space-x-4 mb-4">
+        <h1 class="text-3xl font-extrabold animate-slideInLeft">History</h1>
+      </div>
+      <p class="text-lg mb-4 animate-slideInRight">
+        The school was established and absorbed by the Ghana Education Service in January, 1994 through the initiative of the chiefs and people of Akontombra in the then Sefwi Wiawso District who unanimously realized the dynamics of secondary school education on the socio-economic development of individuals and the society at large.
         <br /><br />
-        The Akontombra Senior High School is basically a Day School. Yet it has hostel facilities that can accommodate about 150 students. There is a Six-unit classroom block with office and store. As at the time of this documentation, a
-        <br /><br />
+        The Akontombra Senior High School is basically a Day School. Yet it has hostel facilities that can accommodate about 150 students. There is a Six-unit classroom block with office and store. As at the time of this documentation
       </p>
-      <h3 class="font-semibold mb-2 animate-slideInLeft text-3xl">Achievements</h3>
-      <ul class="list-disc list-inside mt-2 text-lg">
-        <li>Mr. James Kwabena Nkuah was adjudged the best Teacher, Secondary Division, Western Region in 2007</li>
-        <li>The Girls’ Football team was the Champion for Sefwi Zone from 2008 to 2012</li>
-        <li>Mr. Opoku Samuel was awarded for being the best WASSCE Student in the Western Region in 2013</li>
+      <div id="coursesOfferedContent" class="dropdown-content animate-fadeIn" aria-hidden="true">
+      <ul class="list-disc list-inside space-y-3 text-lg">
       </ul>
-
-      <h3 class="font-semibold mb-2 animate-slideInLeft text-3xl">Our Vision</h3>
-      <p class="text-gray-700 animate-slideInLeft text-lg">
-        Our Vision of the school: To identify academic potentials within the Akontombra community and elsewhere, and to encourage and help develop such talents under mutually cheap and affordable partnership terms.
-      </p>
-
-      <h3 class="font-semibold mb-2 animate-slideInLeft text-3xl">Our Mission</h3>
-      <p class="text-gray-700 animate-slideInLeft text-lg">
-        The mission of the school: To provide access for cheap and affordable secondary school education to a marginalized and deprived rural pupils who would have otherwise been deprived of secondary school education due to ignorance and high level of poverty.
-      </p>
-
     </div>
 
     <section class="mt-12 animate-fadeIn">
-      <h2 class="text-3xl font-extrabold mb-6">Core Values</h2>
+      <h2 class="text-3xl font-extrabold mb-6">Mission</h2>
       <ul class="list-disc list-inside space-y-3 text-lg">
-        <li>Integrity: We uphold honesty and strong moral principles in all our endeavors.</li>
-        <li>Excellence: We strive for the highest standards in academics and personal development.</li>
-        <li>Community Engagement: We foster a supportive and inclusive environment that encourages collaboration and service.</li>
-        <li>Innovation: We embrace creativity and continuous improvement in teaching and learning.</li>
+        <li>To provide a holistic education that nurtures the intellectual, emotional, and social development of our students.</li>
+        <li>To foster a culture of excellence, integrity, and respect within the school community.</li>
+        <li>To prepare students for higher education and responsible citizenship.</li>
+        <li>To promote lifelong learning and personal growth.</li>
       </ul>
     </section>
 
-  <footer class="bg-green-700 text-white py-6 mt-20 animate-slideInRight">
+    <section class="mt-12 animate-fadeIn">
+      <h2 class="text-3xl font-extrabold mb-6">vision</h2>
+      <ul class="list-disc list-inside space-y-3 text-lg">
+        <li>To be a leading institution in academic excellence and character development.</li>
+        <li>To empower students to become critical thinkers, effective communicators, and responsible citizens.</li>
+        <li>To create a safe and inclusive learning environment that celebrates diversity.</li>
+        <li>To foster partnerships with parents, alumni, and the community for the betterment of our students.</li>
+      <ul class="list-disc list-inside space-y-3 text-lg">
+    </section>
+
+    <section class="mt-12 animate-fadeIn">
+      <h2 class="text-3xl font-extrabold mb-6">Achievements</h2>
+      <ul class="list-disc list-inside space-y-3 text-lg">
+        <li>Mr. James Kwabena Nkuah was adjudged the best Teacher, Secondary Division, Western Region in 2007</li>
+        <li>The Girls' Football team was the Champion for Sefwi Zone from 2008 to 2012</li>
+        <li>Mr. Opoku Samuel was awarded for being the best WASSCE Student in the Western Region in 2013</li>
+        <li>Established in 1994, the school has grown to become a reputable institution in the region.</li>
+        <li>Over 90% of graduates gain admission to tertiary institutions each year.</li>
+        <li>Strong emphasis on academic excellence, with a focus on STEM subjects.</li>
+        <li>Well-equipped science and computer laboratories to support practical learning.</li>
+        <li>Active participation in extracurricular activities, including sports, music, and drama.</li>
+        <li>Regular workshops and seminars to enhance students' skills and knowledge.</li>
+        <li>Consistent high performance in WASSCE examinations.</li>
+        <li>Numerous awards in national and regional competitions.</li>
+        <li>Active participation in community service and outreach programs.</li>
+        <li>Strong alumni network contributing to the school's growth and development.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-green-700 text-white py-6 mt-20">
     <div class="container mx-auto text-center">
-      <p>© 2024 Akontombra Senior High School. All rights reserved.</p>
-      <div class="mt-4 space-x-4">
+      <p>© 2025 Akontombra Senior High School. All rights reserved.</p>
         <a href="https://www.facebook.com/p/Akontombra-Senior-High-School-Old-Students-Association-100054255919977/" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
         <a href="https://twitter.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
         <a href="https://instagram.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
       </div>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
+  <style>
+    @keyframes fadeBackground {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
   <script>
-    document.querySelectorAll('.dropdown-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const dropdownContent = header.querySelector('.dropdown-content');
-        const icon = header.querySelector('i.fas.fa-chevron-down');
-        if (dropdownContent.classList.contains('open')) {
-          dropdownContent.classList.remove('open');
-          icon.classList.remove('rotate-90');
-          icon.classList.add('rotate-0');
-        } else {
-          dropdownContent.classList.add('open');
-          icon.classList.remove('rotate-0');
-          icon.classList.add('rotate-90');
-        }
-      });
-    });
+    (function() {
+      const images = [
+      
+      ];
+      let currentIndex = 0;
+      const style = document.createElement('style');
+      document.head.appendChild(style);
+
+      function setBackgroundImage(index) {
+        style.innerHTML = `
+          body::after {
+            background-image: url('${images[index]}') !important;
+            background-size: cover !important;
+            animation: fadeBackground 6s infinite;
+            animation-timing-function: ease-in-out;
+          }
+        `;
+      }
+
+      function cycleImages() {
+        setBackgroundImage(currentIndex);
+        currentIndex = (currentIndex + 1) % images.length ;
+      }
+
+      cycleImages();
+      setInterval(cycleImages, 6000);
+    })();
   </script>
 </body>
 </html>

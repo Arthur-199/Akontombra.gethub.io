@@ -1,0 +1,298 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::after {
+  content: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100%;
+  /* background-image will be set dynamically by JS */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  z-index: -2;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeBackground {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+nav ul li a {
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #facc15; /* Tailwind yellow-400 */
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Container for consistent width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px 0; 
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  min-height: 80px; /* added min-height */
+
+/* Responsive grid for images or cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Remove white background and shadow from cards on index page */
+.index-page .grid > div.rounded.shadow.p-6 {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  main {
+    padding: 20px;
+  }
+}
+
+/* Index page specific styles */
+.index-page header {
+  background-color: green;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* About page header style to match others */
+body.text-gray-800 header.bg-green-700 {
+  background-color: green;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.index-page header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.index-page nav {
+  margin-top: 10px;
+}
+
+.index-page nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.index-page nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.index-page nav ul li a:hover {
+  color: black;
+}
+
+/* Hide all dropdown menus in navigation */
+.index-page nav ul li ul {
+  display: white !important;
+}
+
+/* Hide dropdown menu of the Apply Now button */
+.index-page .relative.inline-block.text-left.group ul {
+  display: white !important;
+}
+
+.index-page main {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+.index-page h1, .index-page h2, .index-page h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.index-page h1 {
+  font-size: 2.2rem;
+}
+
+.index-page h2 {
+  font-size: 1.8rem;
+}
+
+.index-page h3 {
+  font-size: 1.4rem;
+}
+
+.index-page p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: white;
+}
+
+.index-page .text-green-900 {
+  color: white
+}
+
+/* Override text-green-900 color for leadership headers to white */
+.index-page .max-w-xs .text-green-900 {
+  color: white !important;
+}
+
+.index-page .bg-yellow-50 {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.index-page a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.index-page a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.index-page button, .index-page .btn {
+  background-color:
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.index-page button:hover, .index-page .btn:hover {
+  background-color: #003366;
+}

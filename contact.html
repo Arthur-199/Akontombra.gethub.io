@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -24,7 +25,7 @@
       transform: translateX(-50%);
       width: 80%;
       height: 100%;
-      background-image: url('https://ghanahighschools.com/wp-content/uploads/2022/06/0040604-crest-1024x952.png');
+      /* background-image will be set dynamically by JS */
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -103,7 +104,7 @@
       transition: color 0.3s ease;
     }
     nav ul li a:hover {
-      color: #facc15; /* Tailwind yellow-400 */
+      color:#facc15; /* Tailwind yellow-400 */
       transform: scale(1.1);
       transition: color 0.3s ease, transform 0.3s ease;
     }
@@ -121,17 +122,17 @@
           <li><a href="about.html" class="hover:text-green-400 transition">About</a></li>
           <li><a href="academics.html" class="hover:text-green-400 transition">Academics</a></li>
           <li><a href="admissions.html" class="hover:text-green-400 transition">Admissions</a></li>
-          <li><a href="contact.html" class="hover:text-green-400 transition font-semibold underline">Contact</a></li>
+          <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
           <li><a href="location.html" class="hover:text-yellow-400 transition">Location</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container mx-auto p-6 max-w-4xl">
+  <main class="container mx-auto p-6 max-w-4xl bg-transparent">
     <h1 class="text-3xl font-extrabold mb-6 animate-fadeIn">Contact Us</h1>
     <p class="mb-6 animate-fadeIn delay-150 text-lg">We would love to hear from you! Please reach out to us with any questions or inquiries.</p>
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-2 gap-8 bg-transparent">
       <div>
         <h2 class="text-3xl font-semibold mb-4 animate-slideInLeft">School Address</h2>
         <p class="text-lg">Akontombra Senior High School<br />P.O. Box 123<br />Sefwi Akontonbra, Western North Region<br />Ghana</p>
@@ -191,13 +192,48 @@
 
   <footer class="bg-green-700 text-white py-6 mt-20">
     <div class="container mx-auto text-center">
-      <p>© 2024 Akontombra Senior High School. All rights reserved.</p>
-      <div class="mt-4 space-x-4">
+      <p>© 2025 Akontombra Senior High School. All rights reserved.</p>
         <a href="https://www.facebook.com/p/Akontombra-Senior-High-School-Old-Students-Association-100054255919977/" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
         <a href="https://twitter.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
         <a href="https://instagram.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
       </div>
     </div>
   </footer>
+  <style>
+    @keyframes fadeBackground {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+  <script>
+    (function() {
+      const images = [
+        images/Akontombra.JPG,
+      ];
+      let currentIndex = 0;
+      const style = document.createElement('style');
+      document.head.appendChild(style);
+
+      function setBackgroundImage(index) {
+        style.innerHTML = `
+          body::after {
+            background-image: url('${images[index]}') !important;
+            background-size: cover !important;
+            animation: fadeBackground 6s infinite;
+            animation-timing-function: ease-in-out;
+          }
+        `;
+      }
+
+      function cycleImages() {
+        setBackgroundImage(currentIndex);
+        currentIndex = (currentIndex + 1) % images.length;
+      }
+
+      cycleImages();
+      setInterval(cycleImages, 6000);
+    })();
+  </script>
 </body>
 </html>
