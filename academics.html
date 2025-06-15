@@ -8,30 +8,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index-beautify.css" />
   <style>
     body {
       font-family: 'Roboto', sans-serif;
       position: relative;
       color: #1f2937; /* Tailwind gray-800 */
-      filter: saturate(1) contrast(1);
       font-size: 16px;
       line-height: 1.5;
-    }
-    body::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      height: 100%;
-      /* background-image will be set dynamically by JS */
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.3;
-      z-index: -2;
-      pointer-events: none;
     }
     @keyframes fadeIn {
       from {
@@ -108,110 +92,198 @@
       transform: scale(1.1);
       transition: color 0.3s ease, transform 0.3s ease;
     }
+    .drop-text-button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1.125rem; /* text-lg */
+      font-weight: 600; /* font-semibold */
+      color: #047857; /* Tailwind green-700 */
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0;
+    }
+    .arrow-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .drop-text-content {
+      display: none;
+    }
+    .rotated {
+      transform: rotate(90deg);
+    }
   </style>
-</head>
-<body class="text-gray-800">
+<body class="academics-page">
   <header class="bg-green-700 text-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="index.html" class="text-2xl font-bold">Akontombra Senior High School</a>
+    <div class="container mx-auto flex justify-between items-center p-8">
+      <a href="index.html" class="flex items-center text-2xl font-bold hover:text-yellow-400 transition">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fghanahighschools.com%2Fwp-content%2Fuploads%2F2022%2F06%2F0040604-crest-1024x952.png&f=1&nofb=1&ipt=16edaee6acc6598b20bfb010445f270b4edd4683f1c4aadc543a5681ceb77954" alt="Akontombra Senior High School Logo" class="h-40 w-auto mr-3" />
+        Akontombra <br>Senior High School
+      </a>
       <nav>
-        <ul class="flex space-x-6">
+      <nav>
+        <ul class="flex space-x-6 font-semibold">
           <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
           <li><a href="about.html" class="hover:text-green-400 transition">About</a></li>
-          <li><a href="academics.html" class="hover:text-green-400 transition">Academics</a></li>
+          <li><a href="academics.html" class="hover:text-green-400 transition" aria-current="page">Academics</a></li>
           <li><a href="admissions.html" class="hover:text-green-400 transition">Admissions</a></li>
           <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
+          <li><a href="leadership.html" class="hover:text-green-400 transition">Our Leadership</a></li>
           <li><a href="location.html" class="hover:text-green-400 transition">Location</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-    <main class="container mx-auto p-6 max-w-4xl bg-transparent">
-    <div class="space-y-6 bg-transparent">
-      <h1 class="text-3xl font-extrabold mb-6 animate-slideInLeft">Programs</h1>
-      <div id="coursesOfferedContent" class="dropdown-content animate-fadeIn" aria-hidden="true">
-      <ul class="list-disc list-inside space-y-3 text-lg">
-        <li>Agriculture</li>
-        <li>General Science</li>
-        <li>Home Economics</li>
-        <li>General Arts</li>
-        <li>Business</li>
-      </ul>
-    </div>
-
-    <section class="mt-12 animate-fadeIn">
-      <h2 class="text-3xl font-extrabold mb-6">What Makes Our Academics Special</h2>
-      <ul class="list-disc list-inside space-y-3 text-lg">
-        <li>Experienced and passionate faculty dedicated to student success.</li>
-        <li>State-of-the-art science and computer laboratories.</li>
-        <li>Active academic clubs and competitions to foster learning beyond the classroom.</li>
-        <li>Strong track record of student achievements in national exams and competitions.</li>
-        <li>Personalized academic counseling and support services.</li>
-      </ul>
+  <main class="container mx-auto p-6 max-w-4xl bg-transparent" style="margin-top: 6rem;">
+    <section class="hero animate-fadeIn mb-12">
+      <h1>Academics at Akontombra Senior High School</h1>
+      <p>Fostering excellence and lifelong learning through diverse academic programs.</p>
     </section>
 
-    <section class="mt-12 animate-fadeIn">
-      <h2 class="text-3xl font-extrabold mb-6">Academic Departments</h2>
-      <p class="mb-4 text-lg">
-        Akontombra Senior High School offers a diverse range of academic departments designed to cater to the varied interests and career aspirations of our students.
-      </p>
-      <ul class="list-disc list-inside space-y-3 text-lg">
-        <li>Science Department</li>
-        <li>Arts Department</li>
-        <li>Business Department</li>
-        <li>Home Economics Department</li>
-      </ul>
-    </section>
-
-      <section class="mt-12 animate-fadeIn">
-      <h2 class="text-3xl font-extrabold mb-6">Curriculum</h2>
-      <p class="mb-4 text-lg">
-        At Akontombra Senior High School, the curriculum is designed to provide a comprehensive and balanced education that equips students with the knowledge, skills, and values needed for academic success and lifelong learning. Our curriculum follows the Ghana Education Service guidelines and includes core subjects as well as elective courses across various disciplines. We emphasize critical thinking, practical application, and holistic development through classroom instruction, laboratory work, and extracurricular activities.
-      </p>
-      <ul class="list-disc list-inside space-y-3 text-lg">
-        <li>Core Subjects: English Language, Mathematics, Integrated Science, Social Studies</li>
-        <li>Elective Subjects: Physics, Chemistry, Biology, Accounting, Business Management, Visual Arts</li>
-      </ul>
-    </section>
-
-    <section class="mt-12 animate-fadeIn">
-      <h2 class="text-3xl font-extrabold mb-6">Academic Calendar</h2>
-      <p class="mb-4 text-lg">
-        The academic calendar at Akontombra Senior High School follows the Ghana Education Service standard schedule, designed to provide a balanced and effective learning experience.
-      </p>
-      <ul class="list-disc list-inside space-y-3 text-lg">
-        <li><strong>First Term:</strong> Early September to mid-December</li>
-        <li><strong>Christmas Vacation:</strong> Mid-December to early January</li>
-        <li><strong>Second Term:</strong> Early January to late March</li>
-        <li><strong>Easter Vacation:</strong> Late March to mid-April</li>
-        <li><strong>Third Term:</strong> Mid-April to late July</li>
-        <li><strong>End of Academic Year Vacation:</strong> Late July to early September</li>
-        <li><strong>Examinations:</strong> WASSCE and other assessments are typically held during the third term.</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="bg-green-700 text-white py-6 mt-20">
-    <div class="container mx-auto text-center">
-      <p>© 2025 Akontombra Senior High School. All rights reserved.</p>
-        <a href="https://www.facebook.com/p/Akontombra-Senior-High-School-Old-Students-Association-100054255919977/" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="https://twitter.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="https://instagram.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="programsContent" id="togglePrograms">
+        <h2 class="section-title"><i class="fas fa-book"></i> Programs <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="programsContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li>Agriculture</li>
+          <li>General Science</li>
+          <li>Home Economics</li>
+          <li>General Arts</li>
+          <li>Business</li>
+        </ul>
       </div>
     </div>
-  </footer>
+
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="specialContent" id="toggleSpecial">
+        <h2 class="section-title"><i class="fas fa-star"></i> What Makes Our Academics Special <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="specialContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li>Experienced and passionate faculty dedicated to student success.</li>
+          <li>State-of-the-art science and computer laboratories.</li>
+          <li>Active academic clubs and competitions to foster learning beyond the classroom.</li>
+          <li>Strong track record of student achievements in national exams and competitions.</li>
+          <li>Personalized academic counseling and support services.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="departmentsContent" id="toggleDepartments">
+        <h2 class="section-title"><i class="fas fa-building"></i> Academic Departments <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="departmentsContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <p class="mb-4 text-lg">
+          Akontombra Senior High School offers a diverse range of academic departments designed to cater to the varied interests and career aspirations of our students.
+        </p>
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li>Science Department</li>
+          <li>Arts Department</li>
+          <li>Business Department</li>
+          <li>Home Economics Department</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="curriculumContent" id="toggleCurriculum">
+        <h2 class="section-title"><i class="fas fa-book-open"></i> Curriculum <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="curriculumContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <p class="mb-4 text-lg">
+          At Akontombra Senior High School, the curriculum is designed to provide a comprehensive and balanced education that equips students with the knowledge, skills, and values needed for academic success and lifelong learning. Our curriculum follows the Ghana Education Service guidelines and includes core subjects as well as elective courses across various disciplines. We emphasize critical thinking, practical application, and holistic development through classroom instruction, laboratory work, and extracurricular activities.
+        </p>
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li>Core Subjects: English Language, Mathematics, Integrated Science, Social Studies</li>
+          <li>Elective Subjects: Physics, Chemistry, Biology, Accounting, Business Management, Visual Arts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="calendarContent" id="toggleCalendar">
+        <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Academic Calendar <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="calendarContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <p class="mb-4 text-lg">
+          The academic calendar at Akontombra Senior High School follows the Ghana Education Service standard schedule, designed to provide a balanced and effective learning experience.
+        </p>
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li><strong>First Term:</strong> Early September to mid-December</li>
+          <li><strong>Christmas Vacation:</strong> Mid-December to early January</li>
+          <li><strong>Second Term:</strong> Early January to late March</li>
+          <li><strong>Easter Vacation:</strong> Late March to mid-April</li>
+          <li><strong>Third Term:</strong> Mid-April to late July</li>
+          <li><strong>End of Academic Year Vacation:</strong> Late July to early September</li>
+          <li><strong>Examinations:</strong> WASSCE and other assessments are typically held during the third term.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    if (document.body.classList.contains('academics-page')) {
+      document.addEventListener('DOMContentLoaded', function () {
+        function setupToggle(buttonId, contentId) {
+          const button = document.getElementById(buttonId);
+          const content = document.getElementById(contentId);
+          const arrow = button.querySelector('.arrow-icon');
+
+          button.addEventListener('click', function () {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            if (isExpanded) {
+              content.style.display = 'none';
+              content.setAttribute('aria-hidden', 'true');
+              arrow.style.transform = 'rotate(0deg)';
+            } else {
+              content.style.display = 'block';
+              content.setAttribute('aria-hidden', 'false');
+              arrow.style.transform = 'rotate(90deg)';
+            }
+          });
+        }
+
+        setupToggle('togglePrograms', 'programsContent');
+        setupToggle('toggleSpecial', 'specialContent');
+        setupToggle('toggleDepartments', 'departmentsContent');
+        setupToggle('toggleCurriculum', 'curriculumContent');
+        setupToggle('toggleCalendar', 'calendarContent');
+      });
+    }
+  </script>
   <style>
-    @keyframes fadeBackground {
-      0% { opacity: 0; }
-      50% { opacity: 1; }
-      100% { opacity: 0; }
+    @keyframes bounceBackground {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(-20px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 0;
+      }
     }
   </style>
+
+
   <script>
     (function() {
       const images = [
-        images/Akontombra.JPG,
+        'Images/Arthur1.JPG',
+        'Images/Arthur2.JPG',
+        'Images/Arthur3.JPG',
+        'Images/Arthur4.JPG',
+        'Images/George.JPG',
+        'Images/George2.JPG'
       ];
       let currentIndex = 0;
       const style = document.createElement('style');
@@ -222,7 +294,7 @@
           body::after {
             background-image: url('${images[index]}') !important;
             background-size: cover !important;
-            animation: fadeBackground 6s infinite;
+            animation: bounceBackground 6s infinite;
             animation-timing-function: ease-in-out;
           }
         `;
@@ -234,8 +306,17 @@
       }
 
       cycleImages();
-      setInterval(cycleImages, 6000);
+      setInterval(cycleImages, 6000); // Change image every 10 seconds
     })();
   </script>
+
+  <footer class="bg-green-700 text-white py-6 mt-20">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Akontombra Senior High School. All rights reserved.</p>
+      <a href="https://www.facebook.com/p/Akontombra-Senior-High-School-Old-Students-Association-100054255919977/" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://twitter.com/AkontombraSHS" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="https://instagram.com/AkontombraSHS" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+  </footer>
 </body>
 </html>

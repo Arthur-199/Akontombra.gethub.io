@@ -3,35 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Academics - Akontombra Senior High School</title>
+  <title>About - Akontombra Senior High School</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index-beautify.css" />
   <style>
     body {
       font-family: 'Roboto', sans-serif;
       position: relative;
       color: #1f2937; /* Tailwind gray-800 */
-      filter: saturate(1) contrast(1);
       font-size: 16px;
       line-height: 1.5;
-    }
-    body::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      height: 100%;
-      /* background-image will be set dynamically by JS */
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.3;
-      z-index: -2;
-      pointer-events: none;
     }
     @keyframes fadeIn {
       from {
@@ -108,100 +92,236 @@
       transform: scale(1.1);
       transition: color 0.3s ease, transform 0.3s ease;
     }
+    .drop-text-button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1.125rem; /* text-lg */
+      font-weight: 600; /* font-semibold */
+      color: #047857; /* Tailwind green-700 */
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0;
+    }
+    .arrow-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .drop-text-content {
+      display: none;
+    }
   </style>
-</head>
-<body class="text-gray-800">
+<body class="about-page">
   <header class="bg-green-700 text-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="index.html" class="text-2xl font-bold">Akontombra Senior High School</a>
+    <div class="container mx-auto flex justify-between items-center p-8">
+      <a href="index.html" class="flex items-center text-2xl font-bold hover:text-yellow-400 transition">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fghanahighschools.com%2Fwp-content%2Fuploads%2F2022%2F06%2F0040604-crest-1024x952.png&f=1&nofb=1&ipt=16edaee6acc6598b20bfb010445f270b4edd4683f1c4aadc543a5681ceb77954" alt="Akontombra Senior High School Logo" class="h-40 w-auto mr-3" />
+        Akontombra <br>Senior High School
+      </a>
       <nav>
-        <ul class="flex space-x-6">
+        <ul class="flex space-x-6 font-semibold">
           <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-green-400 transition">About</a></li>
+          <li><a href="about.html" class="hover:text-green-400 transition" aria-current="page">About</a></li>
           <li><a href="academics.html" class="hover:text-green-400 transition">Academics</a></li>
           <li><a href="admissions.html" class="hover:text-green-400 transition">Admissions</a></li>
           <li><a href="contact.html" class="hover:text-green-400 transition">Contact</a></li>
+          <li><a href="leadership.html" class="hover:text-green-400 transition">Our Leadership</a></li>
           <li><a href="location.html" class="hover:text-green-400 transition">Location</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  
+  <main class="container mx-auto p-6 max-w-4xl bg-transparent" style="margin-top: 6rem;">
+    <section class="hero animate-fadeIn mb-12">
+      <h1>About Akontombra Senior High School</h1>
+      <p>Learn more about our school's history, mission, vision, achievements, and values.</p>
+    </section>
 
-    <main class="container mx-auto p-6 max-w-4xl bg-transparent">
-    <div class="space-y-6 bg-transparent">
-      <div class="history-header flex items-center space-x-4 mb-4">
-        <h1 class="text-3xl font-extrabold animate-slideInLeft">History</h1>
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="historyContent" id="toggleHistory">
+        <h2 class="section-title"><i class="fas fa-landmark"></i> History <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="historyContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+          <p class="text-lg mb-4">
+          The school was established and absorbed by the Ghana Education Service in January, 1994 through the initiative of the chiefs and people of Akontombra in the then Sefwi Wiawso District who unanimously realized the dynamics of secondary school education on the socio-economic development of individuals and the society at large.
+        </p>
       </div>
-      <p class="text-lg mb-4 animate-slideInRight">
-        The school was established and absorbed by the Ghana Education Service in January, 1994 through the initiative of the chiefs and people of Akontombra in the then Sefwi Wiawso District who unanimously realized the dynamics of secondary school education on the socio-economic development of individuals and the society at large.
-        <br /><br />
-        The Akontombra Senior High School is basically a Day School. Yet it has hostel facilities that can accommodate about 150 students. There is a Six-unit classroom block with office and store. As at the time of this documentation
-      </p>
-      <div id="coursesOfferedContent" class="dropdown-content animate-fadeIn" aria-hidden="true">
-      <ul class="list-disc list-inside space-y-3 text-lg">
-      </ul>
     </div>
 
-    <section class="mt-12 animate-fadeIn">
-      <h2 class="text-3xl font-extrabold mb-6">Mission</h2>
-      <ul class="list-disc list-inside space-y-3 text-lg">
-        <li>To provide a holistic education that nurtures the intellectual, emotional, and social development of our students.</li>
-        <li>To foster a culture of excellence, integrity, and respect within the school community.</li>
-        <li>To prepare students for higher education and responsible citizenship.</li>
-        <li>To promote lifelong learning and personal growth.</li>
-      </ul>
-    </section>
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="missionContent" id="toggleMission">
+        <h2 class="section-title"><i class="fas fa-bullseye"></i> Mission <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="missionContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li>To provide a holistic education that nurtures the intellectual, emotional, and social development of our students.</li>
+          <li>To foster a culture of excellence, integrity, and respect within the school community.</li>
+          <li>To prepare students for higher education and responsible citizenship.</li>
+          <li>To promote lifelong learning and personal growth.</li>
+        </ul>
+      </div>
+    </div>
 
-    <section class="mt-12 animate-fadeIn">
-      <h2 class="text-3xl font-extrabold mb-6">vision</h2>
-      <ul class="list-disc list-inside space-y-3 text-lg">
-        <li>To be a leading institution in academic excellence and character development.</li>
-        <li>To empower students to become critical thinkers, effective communicators, and responsible citizens.</li>
-        <li>To create a safe and inclusive learning environment that celebrates diversity.</li>
-        <li>To foster partnerships with parents, alumni, and the community for the betterment of our students.</li>
-      <ul class="list-disc list-inside space-y-3 text-lg">
-    </section>
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="visionContent" id="toggleVision">
+        <h2 class="section-title"><i class="fas fa-eye"></i> Vision <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="visionContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li>To be a leading institution in academic excellence and character development.</li>
+          <li>To empower students to become critical thinkers, effective communicators, and responsible citizens.</li>
+          <li>To create a safe and inclusive learning environment that celebrates diversity.</li>
+          <li>To foster partnerships with parents, alumni, and the community for the betterment of our students.</li>
+        </ul>
+      </div>
+    </div>
 
-    <section class="mt-12 animate-fadeIn">
-      <h2 class="text-3xl font-extrabold mb-6">Achievements</h2>
-      <ul class="list-disc list-inside space-y-3 text-lg">
-        <li>Mr. James Kwabena Nkuah was adjudged the best Teacher, Secondary Division, Western Region in 2007</li>
-        <li>The Girls' Football team was the Champion for Sefwi Zone from 2008 to 2012</li>
-        <li>Mr. Opoku Samuel was awarded for being the best WASSCE Student in the Western Region in 2013</li>
-        <li>Established in 1994, the school has grown to become a reputable institution in the region.</li>
-        <li>Over 90% of graduates gain admission to tertiary institutions each year.</li>
-        <li>Strong emphasis on academic excellence, with a focus on STEM subjects.</li>
-        <li>Well-equipped science and computer laboratories to support practical learning.</li>
-        <li>Active participation in extracurricular activities, including sports, music, and drama.</li>
-        <li>Regular workshops and seminars to enhance students' skills and knowledge.</li>
-        <li>Consistent high performance in WASSCE examinations.</li>
-        <li>Numerous awards in national and regional competitions.</li>
-        <li>Active participation in community service and outreach programs.</li>
-        <li>Strong alumni network contributing to the school's growth and development.</li>
-      </ul>
-    </section>
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="achievementsContent" id="toggleAchievements">
+        <h2 class="section-title"><i class="fas fa-trophy"></i> Achievements <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="achievementsContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li>Mr. James Kwabena Nkuah was adjudged the best Teacher, Secondary Division, Western Region in 2007</li>
+          <li>The Girls' Football team was the Champion for Sefwi Zone from 2008 to 2012</li>
+          <li>Mr. Opoku Samuel was awarded for being the best WASSCE Student in the Western Region in 2013</li>
+          <li>Established in 1994, the school has grown to become a reputable institution in the region.</li>
+          <li>Over 90% of graduates gain admission to tertiary institutions each year.</li>
+          <li>Strong emphasis on academic excellence, with a focus on STEM subjects.</li>
+          <li>Well-equipped science and computer laboratories to support practical learning.</li>
+          <li>Active participation in extracurricular activities, including sports, music, and drama.</li>
+          <li>Regular workshops and seminars to enhance students' skills and knowledge.</li>
+          <li>Consistent high performance in WASSCE examinations.</li>
+          <li>Numerous awards in national and regional competitions.</li>
+          <li>Active participation in community service and outreach programs.</li>
+          <li>Strong alumni network contributing to the school's growth and development.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="principalContent" id="togglePrincipal">
+        <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> Message from the Principal <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="principalContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <p class="text-lg">
+          Welcome to Akontombra Senior High School. We are dedicated to fostering academic excellence, character development, and a supportive community. Our mission is to empower every student to reach their full potential and become responsible citizens.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <button class="drop-text-button" aria-expanded="false" aria-controls="valuesContent" id="toggleValues">
+        <h2 class="section-title"><i class="fas fa-heart"></i> Core Values <span class="arrow-icon">&#9654;</span></h2>
+      </button>
+      <div id="valuesContent" class="drop-text-content animate-fadeIn" aria-hidden="true">
+        <ul class="list-disc list-inside space-y-3 text-lg">
+          <li>Integrity: We uphold honesty and strong moral principles in all our actions.</li>
+          <li>Excellence: We strive for the highest standards in academics and character.</li>
+          <li>Respect: We foster a culture of mutual respect and inclusivity.</li>
+          <li>Responsibility: We encourage accountability and leadership among students.</li>
+          <li>Community: We promote active engagement and service to society.</li>
+        </ul>
+      </div>
+    </div>
   </main>
+  
+  
+  <button id="backToTopBtn" title="Back to Top" aria-label="Back to Top" class="fixed bottom-6 right-6 bg-green-700 text-white p-3 rounded-full shadow-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500" style="display:none; z-index: 1000;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+  
 
-  <footer class="bg-green-700 text-white py-6 mt-20">
-    <div class="container mx-auto text-center">
-      <p>© 2025 Akontombra Senior High School. All rights reserved.</p>
-        <a href="https://www.facebook.com/p/Akontombra-Senior-High-School-Old-Students-Association-100054255919977/" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="https://twitter.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="https://instagram.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
-      </div>
-    </div>
-  </footer>
+  <script>
+    if (document.body.classList.contains('about-page')) {
+      document.addEventListener('DOMContentLoaded', function () {
+        function setupToggle(buttonId, contentId) {
+          const button = document.getElementById(buttonId);
+          const content = document.getElementById(contentId);
+          const arrow = button.querySelector('.arrow-icon');
+
+          button.addEventListener('click', function () {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            if (isExpanded) {
+              content.style.display = 'none';
+              content.setAttribute('aria-hidden', 'true');
+              arrow.style.transform = 'rotate(0deg)';
+            } else {
+              content.style.display = 'block';
+              content.setAttribute('aria-hidden', 'false');
+              arrow.style.transform = 'rotate(90deg)';
+            }
+          });
+        }
+
+        setupToggle('toggleHistory', 'historyContent');
+        setupToggle('toggleMission', 'missionContent');
+        setupToggle('toggleVision', 'visionContent');
+        setupToggle('toggleAchievements', 'achievementsContent');
+        setupToggle('togglePrincipal', 'principalContent');
+        setupToggle('toggleValues', 'valuesContent');
+
+        // Back to Top button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'block';
+          } else {
+            backToTopBtn.style.display = 'none';
+          }
+        });
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Fix for Safari smooth scroll support
+        if (!('scrollBehavior' in document.documentElement.style)) {
+          backToTopBtn.addEventListener('click', () => {
+            let scrollInterval = setInterval(() => {
+              if (window.pageYOffset === 0) {
+                clearInterval(scrollInterval);
+              } else {
+                window.scrollBy(0, -50);
+              }
+            }, 10);
+          });
+        }
+      });
+    }
+  </script>
+
   <style>
-    @keyframes fadeBackground {
-      0% { opacity: 0; }
-      50% { opacity: 1; }
-      100% { opacity: 0; }
+    @keyframes bounceBackground {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(-20px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 0;
+      }
     }
   </style>
+
+
   <script>
     (function() {
       const images = [
-      
+        'Images/Arthur1.JPG',
+        'Images/Arthur2.JPG',
+        'Images/Arthur3.JPG',
+        'Images/Arthur4.JPG',
+        'Images/George.JPG',
+        'Images/George2.JPG'
       ];
       let currentIndex = 0;
       const style = document.createElement('style');
@@ -212,7 +332,7 @@
           body::after {
             background-image: url('${images[index]}') !important;
             background-size: cover !important;
-            animation: fadeBackground 6s infinite;
+            animation: bounceBackground 6s infinite;
             animation-timing-function: ease-in-out;
           }
         `;
@@ -220,12 +340,21 @@
 
       function cycleImages() {
         setBackgroundImage(currentIndex);
-        currentIndex = (currentIndex + 1) % images.length ;
+        currentIndex = (currentIndex + 1) % images.length;
       }
 
       cycleImages();
-      setInterval(cycleImages, 6000);
+      setInterval(cycleImages, 6000); // Change image every 10 seconds
     })();
   </script>
+  
+  <footer class="bg-green-700 text-white py-6 mt-20">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Akontombra Senior High School. All rights reserved.</p>
+      <a href="https://www.facebook.com/p/Akontombra-Senior-High-School-Old-Students-Association-100054255919977/" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://twitter.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="https://instagram.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+  </footer>
 </body>
 </html>

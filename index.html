@@ -7,103 +7,274 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="color-isolate.css" />
+  <link rel="stylesheet" href="index-beautify.css" />
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    nav ul li a {
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #facc15; /* Tailwind yellow-400 */
-      transform: scale(1.1);
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
+    /* Removed inline styles for body, nav, backToTopBtn, and YouTube toggle animations to use external CSS */
   </style>
 </head>
-<body>
+<body class="index-page">
   <header class="bg-green-700 text-white shadow">
     <div class="container mx-auto flex justify-between items-center p-8">
       <a href="index.html" class="flex items-center text-2xl font-bold hover:text-yellow-400 transition">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fghanahighschools.com%2Fwp-content%2Fuploads%2F2022%2F06%2F0040604-crest-1024x952.png&f=1&nofb=1&ipt=16edaee6acc6598b20bfb010445f270b4edd4683f1c4aadc543a5681ceb77954" alt="Akontombra Senior High School Logo" class="h-40 w-auto mr-3" />
-        Akontombra Senior High School
+        Akontombra <br>Senior High School
       </a>
       <nav>
         <ul class="flex space-x-6 font-semibold">
-          <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
-          <li><a href="about.html" class="hover:text-yellow-400 transition">About</a></li>
-          <li><a href="admissions.html" class="hover:text-yellow-400 transition">Admissions</a></li>
-          <li><a href="academics.html" class="hover:text-yellow-400 transition">Academics</a></li>
-          <li><a href="contact.html" class="hover:text-yellow-400 transition">Contact</a></li>
+          <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
+          
+          <li class="relative group">
+            <a href="about.html" class="hover:text-green-400 transition flex items-center font-semibold underline">
+              About
+              <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+            </a>
+            <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-20">
+              <li><a href="about.html#history" class="block px-4 py-2 hover:bg-green-100">History</a></li>
+              <li><a href="about.html#mission" class="block px-4 py-2 hover:bg-green-100">Mission</a></li>
+              <li><a href="about.html#staff" class="block px-4 py-2 hover:bg-green-100">Vision</a></li>
+              <li><a href="about.html#staff" class="block px-4 py-2 hover:bg-green-100">Achievements</a></li>
+              <li><a href="about.html#staff" class="block px-4 py-2 hover:bg-green-100">Message from the principal</a></li>
+              <li><a href="about.html#staff" class="block px-4 py-2 hover:bg-green-100">Core Values</a></li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <a href="./academics.html" class="hover:text-green-400 transition flex items-center font-semibold underline">
+              Academics
+              <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+            </a>
+            <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-20">
+              <li><a href="academics.html#programs" class="block px-4 py-2 hover:bg-green-100">Programs</a></li>
+              <li><a href="academics.html#departments" class="block px-4 py-2 hover:bg-green-100">What makes our adcademics Special</a></li>
+              <li><a href="academics.html#faculty" class="block px-4 py-2 hover:bg-green-100">Curriculum</a></li>
+              <li><a href="about.html#staff" class="block px-4 py-2 hover:bg-green-100">Academic calender</a></li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <a href="./admissions.html" class="hover:text-green-400 transition flex items-center font-semibold underline">
+              Admissions
+              <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+            </a>
+            <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-20">
+              <li><a href="./admissions.html#online" class="block px-4 py-2 hover:bg-green-100">Apply Online</a></li>
+              <li><a href="./admissions.html#requirements" class="block px-4 py-2 hover:bg-green-100">Application Requirements</a></li>
+              <li><a href="./contact.html#admissions" class="block px-4 py-2 hover:bg-green-100">Contact Admissions</a></li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <a href="./contact.html" class="hover:text-green-400 transition flex items-center font-semibold underline">
+              Contact
+              <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+            </a>
+            <ul class="absolute left-0 mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-20">
+              <li><a href="./contact.html#form" class="block px-4 py-2 hover:bg-green-100">Contacts Form</a></li>
+            </ul>
+          </li>
+
+        
+          <li class="relative group">
+            <a href="leadership.html" class="hover:text-green-400 transition flex items-center font-semibold underline">
+              Our Leadership
+              <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+            </a>
+            <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-20">
+              <li><a href="leadership.html" class="block px-4 py-2 hover:bg-green-100">Leadership Page</a></li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a href="./location.html" class="hover:text-green-400 transition flex items-center font-semibold underline">
+              Location
+              <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+            </a>
+            <ul class="absolute left-0 mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-20">
+              <li><a href="./location.html#map" class="block px-4 py-2 hover:bg-green-100">Map location</a></li>
+              <li><a href="./location.html#directions" class="block px-4 py-2 hover:bg-green-100">Directions</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="relative container mx-auto p-6">
-    <section class="text-center py-20 animate-fadeIn">
-      <h1 class="text-4xl font-extrabold mb-4 font-bold animate-fadeIn">Welcome to Akontombra Senior High School</h1>
-      <p class="text-lg max-w-3xl mx-auto mb-8 font-bold animate-fadeIn delay-150">Empowering students to achieve academic excellence and personal growth in a nurturing environment.</p>
-      <p class="text-xl font-bold italic max-w-3xl mx-auto mb-8 animate-fadeIn delay-300">Motto: Hwεhwε Nimdeε, Koryε ne Adwumaden</p>
+  <main class="relative container mx-auto p-6 rounded-lg index-page">
+    <section class="hero mb-12">
+      <h1 class="animate-bounce font-extrabold mb-4 font-bold">Welcome to Great Akonsec</h1>
+      <p class="text-lg max-w-3xl mx-auto mb-8 font-bold animate-bounce delay-150">Empowering students to achieve academic excellence and personal growth in a nurturing environment.</p>
+      <p class="text-xl font-bold italic max-w-3xl mx-auto mb-8 animate-bounce delay-300">Motto: Hwεhwε Nimdeε, Koryε ne Adwumaden</p>
+      <p class="text-lg max-w-3xl mx-auto mb-8 font-semibold text-black-300 animate-bounce delay-450">
+        At Akontombra Senior High School, we pride ourselves on fostering a vibrant community where every student is encouraged to excel, innovate, and lead with integrity.
+      </p>
       <div class="relative inline-block text-left group">
-        <a href="admissions.html" class="inline-block bg-green-400 text-green-900 font-semibold px-6 py-3 rounded shadow hover:bg-green-500 transition animate-pulse">Apply Now <i class="fas fa-chevron-down ml-1"></i></a>
-        <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-20">
-          <li><a href="admissions.html#online" class="block px-4 py-2 hover:bg-green-100">Apply Online</a></li>
-          <li><a href="admissions.html#requirements" class="block px-4 py-2 hover:bg-green-100">Application Requirements</a></li>
-          <li><a href="contact.html#admissions" class="block px-4 py-2 hover:bg-green-100">Contact Admissions</a></li>
-        </ul>
+        <a href="admissions.html" class="apply-btn animate-pulse">Apply Now <i class="fas fa-chevron-down ml-1"></i></a>
       </div>
     </section>
 
     <section class="grid md:grid-cols-3 gap-8 mt-16">
-      <div class="rounded shadow p-6 hover:shadow-lg transition animate-slideInLeft delay-100">
-        <i class="fas fa-book-open text-green-900 text-4xl mb-4 animate-bounce animate-lean"></i>
-        <h2 class="text-xl font-semibold mb-2 font-bold">Quality Education</h2>
-        <p class="font-bold">We offer a comprehensive curriculum designed to prepare students for success in higher education and beyond.</p>
+      <div class="feature-card">
+        <i class="fas fa-book-open"></i>
+        <h2>Quality Education</h2>
+        <p>We offer a comprehensive curriculum designed to prepare students for success in higher education and beyond.</p>
       </div>
-      <div class="rounded shadow p-6 hover:shadow-lg transition animate-fadeIn delay-300">
-        <i class="fas fa-users text-green-900 text-4xl mb-4 animate-bounce animate-lean"></i>
-        <h2 class="text-xl font-semibold mb-2 font-bold">Experienced Faculty</h2>
-        <p class="font-bold">Our dedicated teachers are committed to fostering a supportive and engaging learning environment.</p>
+      <div class="feature-card">
+        <i class="fas fa-users"></i>
+        <h2>Experienced Faculty</h2>
+        <p>Our dedicated teachers are committed to fostering a supportive and engaging learning environment.</p>
       </div>
-      <div class="rounded shadow p-6 hover:shadow-lg transition animate-slideInRight delay-500">
-        <i class="fas fa-school text-green-900 text-4xl mb-4 animate-bounce animate-lean"></i>
-        <h2 class="text-xl font-semibold mb-2 font-bold">Vibrant Community</h2>
-        <p class="font-bold">Join a diverse and active student body with numerous clubs, sports, and extracurricular activities.</p>
-      </div>
-    </section>
-
-    <section class="mt-20">
-      <h2 class="text-3xl font-bold text-center mb-10 animate-fadeIn">Our Leadership Team</h2>
-      <div class="flex flex-col md:flex-row justify-center items-center gap-12">
-        <div class="max-w-xs rounded shadow p-6 text-center transform transition duration-700 hover:scale-105 animate-fadeIn">
-        <img src="https://via.placeholder.com/150" alt="Headmaster" class="mx-auto rounded-full mb-4 w-40 h-40 object-cover animate-lean" />
-        <h3 class="text-xl font-semibold font-bold">Headmaster</h3>
-        <p class="text-green-900 font-medium font-bold">Mr. John Doe</p>
-      </div>
-      <div class="max-w-xs rounded shadow p-6 text-center transform transition duration-700 hover:scale-105 animate-fadeIn delay-200">
-        <img src="https://via.placeholder.com/150" alt="Assistant Headmaster" class="mx-auto rounded-full mb-4 w-40 h-40 object-cover animate-lean" />
-        <h3 class="text-xl font-semibold font-bold">Assistant Headmaster</h3>
-        <p class="text-green-900 font-medium font-bold">Mrs. Jane Smith</p>
-      </div>
-      <div class="max-w-xs rounded shadow p-6 text-center transform transition duration-700 hover:scale-105 animate-fadeIn delay-400">
-        <img src="https://via.placeholder.com/150" alt="Senior House Master" class="mx-auto rounded-full mb-4 w-40 h-40 object-cover animate-lean" />
-        <h3 class="text-xl font-semibold font-bold">Senior House Master</h3>
-        <p class="text-green-900 font-medium font-bold">Mr. Michael Brown</p>
+      <div class="feature-card">
+        <i class="fas fa-school"></i>
+        <h2>Vibrant Community</h2>
+        <p>Join a diverse and active student body with numerous clubs, sports, and extracurricular activities.</p>
       </div>
     </section>
 
-  </main>
+    <button id="toggleVideoBtn" class="button-pulse" style="margin-top: 2rem; padding: 0.5rem 1rem; background-color: #067359; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Hide YouTube Video
+    </button>
+    <section id="youtubeSection" class="">
+      <h2 class="text-3xl font-extrabold mb-8 text-black text-center">Latest News and Events</h2>
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-96 rounded-lg shadow-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Akontombra Senior High School Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+  <script>
+      if (document.body.classList.contains('index-page')) {
+        const toggleBtn = document.getElementById('toggleVideoBtn');
+        const youtubeSection = document.getElementById('youtubeSection');
+        let videoVisible = true;
 
-  <footer class="bg-green-700 text-white py-6 mt-20 animate-slideInRight">
+        toggleBtn.addEventListener('click', () => {
+          if (videoVisible) {
+            // Fade out animation before hiding
+            youtubeSection.classList.remove('fade-in');
+            youtubeSection.classList.add('fade-out');
+            youtubeSection.addEventListener('animationend', () => {
+              youtubeSection.classList.add('youtube-section-hidden');
+            }, { once: true });
+            toggleBtn.textContent = 'Show YouTube Video';
+            toggleBtn.classList.remove('button-pulse');
+          } else {
+            // Show and fade in
+            youtubeSection.classList.remove('youtube-section-hidden', 'fade-out');
+            youtubeSection.classList.add('fade-in');
+            toggleBtn.textContent = 'Hide YouTube Video';
+            toggleBtn.classList.add('button-pulse');
+          }
+          videoVisible = !videoVisible;
+        });
+      }
+    </script>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to Top" title="Back to Top" style="display:none; position:fixed; bottom:40px; right:40px; z-index:100; background-color:#064e3b; color:white; border:none; padding:12px 16px; border-radius:50%; cursor:pointer; font-size:18px; box-shadow:0 4px 8px rgba(0,0,0,0.3); transition:background-color 0.3s ease;">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode" style="position: fixed; bottom: 100px; right: 40px; z-index: 100; background-color: #064e3b; color: white; border: none; padding: 12px 16px; border-radius: 50%; cursor: pointer; font-size: 18px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+      if (document.body.classList.contains('index-page')) {
+        // Back to Top button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'block';
+          } else {
+            backToTopBtn.style.display = 'none';
+          }
+        });
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    </script>
+    <script>
+      if (document.body.classList.contains('index-page')) {
+        // Dark Mode Toggle functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        let darkModeEnabled = false;
+        darkModeToggle.addEventListener('click', () => {
+          if (darkModeEnabled) {
+            document.body.classList.remove('dark');
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+          } else {
+            document.body.classList.add('dark');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+          }
+          darkModeEnabled = !darkModeEnabled;
+        });
+      }
+    </script>
+    <style>
+    @keyframes bounceBackground {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(-20px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+    }
+  </style>
+
+
+  <script>
+    (function() {
+      const images = [
+        'Images/Arthur1.JPG',
+        'Images/Arthur2.JPG',
+        'Images/Arthur3.JPG',
+        'Images/Arthur4.JPG',
+        'Images/George.JPG',
+        'Images/George2.JPG'
+      ];
+      let currentIndex = 0;
+      const style = document.createElement('style');
+      document.head.appendChild(style);
+
+      function setBackgroundImage(index) {
+        style.innerHTML = `
+          body::after {
+            background-image: url('${images[index]}') !important;
+            background-size: cover !important;
+            animation: bounceBackground 6s infinite;
+            animation-timing-function: ease-in-out;
+          }
+        `;
+      }
+
+      function cycleImages() {
+        setBackgroundImage(currentIndex);
+        currentIndex = (currentIndex + 1) % images.length;
+      }
+
+      cycleImages();
+      setInterval(cycleImages, 6000); // Change image every 10 seconds
+    })();
+  </script>
+    
+     <footer class="bg-green-700 text-white py-6 mt-20">
     <div class="container mx-auto text-center">
       <p>© 2025 Akontombra Senior High School. All rights reserved.</p>
-      <div class="mt-4 space-x-4">
-        <a href="#" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
+      <div>
+        <a href="https://www.facebook.com/p/Akontombra-Senior-High-School-Old-Students-Association-100054255919977/" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://twitter.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="https://instagram.com/placeholder" target="_blank" rel="noopener noreferrer" class="hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
       </div>
     </div>
   </footer>
+
+  
 </body>
 </html>
